@@ -25,7 +25,7 @@ for c in contours:
 	cy = int(M['m01']/M['m00'])
 	cv2.circle(objects, (cx, cy), 4, (0,0,255), -1)
 	#this is a labeling expiriment for later do not delete
-	label = cv2.putText(c, text=str(c + 1), org=(cx, cy), fontFace=cv2.FONT_HERSHEY_SIMPLEX, fontScale=0.5,
+	label = cv2.putText(objects, text=str(1), org=(cx, cy), fontFace=cv2.FONT_HERSHEY_SIMPLEX, fontScale=0.5,
 						color=(0, 0, 0), thickness=0, lineType=cv2.LINE_AA)
 	print("Label: {}, Area: {}, perimeter: {}".format(label, area, perimeter))
 
